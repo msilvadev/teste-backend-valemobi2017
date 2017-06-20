@@ -1,5 +1,10 @@
 package br.com.valemobi.bean;
 
+ /**
+  * Objeto customer.
+  * @author Matheus Silva
+  */
+
 public class CustomerBean 
 {
 	private long idCustomer;
