@@ -49,7 +49,7 @@ public class Mostra
 		try 
 		{
 			double media = dao.getMediaFinal(560, 1500, 2700);
-			System.out.println("Sua média é: " + media);
+			System.out.println("Sua media e: " + media);
 			List<CustomerBean> cutomer = dao.listaClientes(500, 1500, 2700);
 			for(CustomerBean c : cutomer)
 			{
