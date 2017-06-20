@@ -50,11 +50,10 @@ public class Mostra
 		{
 			double media = dao.getMediaFinal(560, 1500, 2700);
 			System.out.println("Sua média é: " + media);
-			List<CustomerBean> cutomer = dao.listaClientes(500, 1500, 2700);
+			List<CustomerBean> cutomer = dao.listCustomer(500, 1500, 2700);
 			for(CustomerBean c : cutomer)
 			{
-				System.out.println("" +
-						"id " + c.getIdCustomer() + "Nome " + c.getNmCustomer() + "CPF ou CNPJ  " + c.getCpfCnpj() + "," + (c.isActive() ? "Ativo " : "Inativo ") + "Valor Total  " + c.getVlTotal());
+				System.out.println("" + "id " + c.getIdCustomer() + "Nome " + c.getNmCustomer() + "CPF ou CNPJ  " + c.getCpfCnpj() + "," + (c.isActive() ? "Ativo " : "Inativo ") + "Valor Total  " + c.getVlTotal());
 			}
 			
 		} catch (SQLException e) 

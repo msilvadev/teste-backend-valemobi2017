@@ -45,7 +45,7 @@ public class CustomerDao
 		}
 	}
 	
-	public List<CustomerBean> listaClientes(double valorTotal, long idInicial, long idFinal) throws SQLException {
+	public List<CustomerBean> listCustomer(double valorTotal, long idInicial, long idFinal) throws SQLException {
 
 		this.conn = new ConnectionFactory().getConnection();
 		List<CustomerBean> lista = new ArrayList<>();
