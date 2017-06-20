@@ -8,6 +8,14 @@ public class CustomerBean
 	private boolean active;
 	private long vlTotal;
 	
+	public CustomerBean(long idCustomer, String cpfCnpj, String nmCustomer, boolean active, long vlTotal) {
+		super();
+		this.idCustomer = idCustomer;
+		this.cpfCnpj = cpfCnpj;
+		this.nmCustomer = nmCustomer;
+		this.active = active;
+		this.vlTotal = vlTotal;
+	}
 	public long getIdCustomer()
 	{
 		return idCustomer;
