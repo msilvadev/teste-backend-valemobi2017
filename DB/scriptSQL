@@ -1,0 +1,9 @@
+create database testbackvalemobi;
+
+create table if not exists tb_customer_account(
+id_customer double not null unique,
+cpf_cnpj char(14) not null,
+nm_customer nvarchar(255) not null,
+is_active boolean not null,
+vl_total long not null,
+PRIMARY KEY (id_customer));
