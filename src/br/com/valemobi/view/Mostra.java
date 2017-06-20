@@ -12,6 +12,7 @@ public class Mostra
 	public static void main(String[] args) 
 	{
 		
+		// instancia de um objeto CustomerBean e setando seus atributos
 		CustomerBean customer = new CustomerBean();
 		customer.setIdCustomer(001);
 		customer.setCpfCnpj("00000000001");
@@ -19,6 +20,7 @@ public class Mostra
 		customer.setActive(true);
 		customer.setVlTotal(1500);
 		
+		// instancia de um objeto CustomerBean e setando seus atributos
 		CustomerBean customer1 = new CustomerBean();
 		customer1.setIdCustomer(1501);
 		customer1.setCpfCnpj("00000000002");
@@ -26,6 +28,7 @@ public class Mostra
 		customer1.setActive(true);
 		customer1.setVlTotal(657);
 		
+		// instancia de um objeto CustomerBean e setando seus atributos
 		CustomerBean customer2 = new CustomerBean();
 		customer2.setIdCustomer(2699);
 		customer2.setCpfCnpj("00000000003");
@@ -33,6 +36,7 @@ public class Mostra
 		customer2.setActive(true);
 		customer2.setVlTotal(6590);
 		
+		// instancia de um objeto CustomerBean e setando seus atributos
 		CustomerBean customer3 = new CustomerBean();
 		customer3.setIdCustomer(1954);
 		customer3.setCpfCnpj("00000000004");
@@ -40,12 +44,14 @@ public class Mostra
 		customer3.setActive(true);
 		customer3.setVlTotal(4500);
 		
+		// inserindo objetos já populados CustomerBean
 		CustomerDao dao = new CustomerDao();
 		dao.insereCustomer(customer);
 		dao.insereCustomer(customer1);
 		dao.insereCustomer(customer2);
 		dao.insereCustomer(customer3);
 		
+		//realiza os testes
 		try 
 		{
 			double media = dao.getMediaFinal(560, 1500, 2700);
