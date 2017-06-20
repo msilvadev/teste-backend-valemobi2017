@@ -6,6 +6,13 @@ import java.sql.SQLException;
 
 public class ConnectionFactory
 {
+	/**
+	  * Cria conexão com o Banco de Dados.
+	  * 
+	  * @return            conexão ou exception
+	  * @throws 	       SQLException
+	  * @author            Matheus Silva
+	  */
 	public Connection getConnection()
 	{
 		try
