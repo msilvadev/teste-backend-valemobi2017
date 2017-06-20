@@ -41,7 +41,6 @@ public class CustomerDao
 			
 			stmt.execute();
 			stmt.close();
-			conn.close();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
@@ -86,7 +85,7 @@ public class CustomerDao
 	public double getMediaFinal(double valorTotal, long idInicial, long idFinal) throws SQLException {
 
 		this.conn = new ConnectionFactory().getConnection();
-		double resultado = 0;
+		double resultado = 0.0;
 
 		try {
 			String sql = "Select avg(vl_total) from tb_customer_account where vl_total>? and id_customer between ? and ?;";
