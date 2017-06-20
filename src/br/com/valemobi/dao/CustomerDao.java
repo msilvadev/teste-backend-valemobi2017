@@ -20,6 +20,13 @@ public class CustomerDao
 		this.conn = new ConnectionFactory().getConnection();
 	}
 	
+	/**
+	  * Insere um novo customer no banco.
+	  * 
+	  * @param customer    Objeto populado
+	  * @return            verdadeiro se o movimento é válido ou falso se inválido
+	  * @author            Matheus Silva
+	  */
 	public void insereCustomer(CustomerBean customer)
 	{
 		String sql = "insert into tb_customer_account" + "(id_customer, cpf_cnpj, nm_customer, is_active, vl_total)" 
@@ -46,6 +53,15 @@ public class CustomerDao
 		}
 	}
 	
+	/**
+	  * Cria uma lisa de Customers.
+	  * 
+	  * @param valorTotal  valor total a ser considerado para que seja feita a média com objetos que seja maior que esse valor
+	  * @param idInicial   id minimo para filtrar
+	  * @param idFinal     id maximo para filtrar
+	  * @return            lista com objetos dentro dos parametros
+	  * @author            Matheus Silva
+	  */
 	public List<CustomerBean> listaClientes(double valorTotal, long idInicial, long idFinal) throws SQLException {
 
 		this.conn = new ConnectionFactory().getConnection();
@@ -82,6 +98,15 @@ public class CustomerDao
 		return lista;
 	}
 	
+	 /**
+	  * Calculo da media do campo vl_total.
+	  * 
+	  * @param valorTotal  valor total a ser considerado para que seja feita a média com objetos que seja maior que esse valor
+	  * @param idInicial   id minimo para filtrar
+	  * @param idFinal     id maximo para filtra
+	  * @return            resultado da media
+	  * @author            Matheus Silva
+	  */
 	public double getMediaFinal(double valorTotal, long idInicial, long idFinal) throws SQLException {
 
 		this.conn = new ConnectionFactory().getConnection();
