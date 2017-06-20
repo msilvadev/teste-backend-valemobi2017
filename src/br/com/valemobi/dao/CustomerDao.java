@@ -22,7 +22,8 @@ public class CustomerDao
 	
 	public void insereCustomer(CustomerBean customer)
 	{
-		String sql = "insert into tb_customer_account" + "(id_customer, cpf_cnpj, nm_customer, is_active, vl_total)" + "values (?, ?, ?, ?, ?)";
+		String sql = "insert into tb_customer_account" + "(id_customer, cpf_cnpj, nm_customer, is_active, vl_total)" 
+								+ "values (?, ?, ?, ?, ?)";
 		
 		this.conn = new ConnectionFactory().getConnection();
 		
